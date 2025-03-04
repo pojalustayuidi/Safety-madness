@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://casxukuifvcdr"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Button" type="Button" parent="."]
+offset_left = 178.0
+offset_top = 366.0
+offset_right = 950.0
+offset_bottom = 570.0
+theme_override_font_sizes/font_size = 32
+text = "4212"
