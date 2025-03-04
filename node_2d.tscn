@@ -8,3 +8,10 @@ offset_top = 68.0
 offset_right = 658.0
 offset_bottom = 278.0
 text = "dfwefrw"
+
+[node name="Button" type="Button" parent="Button"]
+offset_left = 2.0
+offset_top = 282.0
+offset_right = 504.0
+offset_bottom = 492.0
+text = "dfwefrw"
