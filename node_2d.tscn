@@ -1,17 +1,21 @@
-[gd_scene format=3 uid="uid://b4trkbyi5q8n7"]
+[gd_scene load_steps=2 format=3 uid="uid://b4trkbyi5q8n7"]
+
+[ext_resource type="PackedScene" uid="uid://cn00cyjixdmmr" path="res://parallax_background.tscn" id="1_wtcfe"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Играть" type="Button" parent="."]
-offset_left = 226.0
-offset_top = 289.0
-offset_right = 489.0
-offset_bottom = 375.0
+offset_left = 455.0
+offset_top = 229.0
+offset_right = 718.0
+offset_bottom = 315.0
 text = "начать"
 
 [node name="Выйти" type="Button" parent="."]
-offset_left = 224.0
-offset_top = 426.0
-offset_right = 487.0
-offset_bottom = 512.0
+offset_left = 453.0
+offset_top = 366.0
+offset_right = 716.0
+offset_bottom = 452.0
 text = "Выйти"
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("1_wtcfe")]
