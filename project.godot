@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Safety-maddness"
-run/main_scene="uid://cn00cyjixdmmr"
+run/main_scene="uid://b4trkbyi5q8n7"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_height=619
 
 [rendering]
 
