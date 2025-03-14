@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://cn00cyjixdmmr"]
 
-[ext_resource type="Texture2D" uid="uid://rwvuwwg6hrfy" path="res://parallax-industrial-web/Assets/Layers/bg.png" id="1_2pwms"]
+[ext_resource type="Texture2D" uid="uid://rwvuwwg6hrfy" path="res://assets/parallax-industrial-web/Assets/Layers/bg.png" id="1_2pwms"]
 [ext_resource type="Script" uid="uid://bwt5vgv7hanp7" path="res://parallax_background.gd" id="1_xoild"]
-[ext_resource type="Texture2D" uid="uid://bdcow3tjhpk03" path="res://parallax-industrial-web/Assets/Layers/far-buildings.png" id="2_xoild"]
-[ext_resource type="Texture2D" uid="uid://b53oava4whfb8" path="res://parallax-industrial-web/Assets/Layers/buildings.png" id="3_kwhg4"]
-[ext_resource type="Texture2D" uid="uid://bqrv8a2l1mtk8" path="res://parallax-industrial-web/Assets/Layers/skill-foreground.png" id="4_hy12d"]
+[ext_resource type="Texture2D" uid="uid://bdcow3tjhpk03" path="res://assets/parallax-industrial-web/Assets/Layers/far-buildings.png" id="2_xoild"]
+[ext_resource type="Texture2D" uid="uid://b53oava4whfb8" path="res://assets/parallax-industrial-web/Assets/Layers/buildings.png" id="3_kwhg4"]
+[ext_resource type="Texture2D" uid="uid://bqrv8a2l1mtk8" path="res://assets/parallax-industrial-web/Assets/Layers/skill-foreground.png" id="4_hy12d"]
 
 [node name="ParallaxBackground" type="ParallaxBackground"]
 script = ExtResource("1_xoild")
