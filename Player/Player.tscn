@@ -1,10 +1,10 @@
 [gd_scene load_steps=45 format=3 uid="uid://dl47yi4lntnxu"]
 
-[ext_resource type="Texture2D" uid="uid://cl837ad37s3c1" path="res://assetsPlayer/Gangsters_2/Idle.png" id="1_3qydi"]
+[ext_resource type="Texture2D" uid="uid://cl837ad37s3c1" path="res://assets/assetsPlayer/Gangsters_2/Idle.png" id="1_3qydi"]
 [ext_resource type="Script" uid="uid://81pp0yp7sv5o" path="res://Player/player.gd" id="1_8g4oa"]
-[ext_resource type="Texture2D" uid="uid://bxu21u0ikxxh4" path="res://assetsPlayer/Gangsters_2/Jump.png" id="2_ddoul"]
-[ext_resource type="Texture2D" uid="uid://cf8eakb57j7h8" path="res://assetsPlayer/Gangsters_2/Run.png" id="3_8g4oa"]
-[ext_resource type="Texture2D" uid="uid://dapalpyrehlnp" path="res://assetsPlayer/Gangsters_2/Walk.png" id="4_6ysni"]
+[ext_resource type="Texture2D" uid="uid://bxu21u0ikxxh4" path="res://assets/assetsPlayer/Gangsters_2/Jump.png" id="2_ddoul"]
+[ext_resource type="Texture2D" uid="uid://cf8eakb57j7h8" path="res://assets/assetsPlayer/Gangsters_2/Run.png" id="3_8g4oa"]
+[ext_resource type="Texture2D" uid="uid://dapalpyrehlnp" path="res://assets/assetsPlayer/Gangsters_2/Walk.png" id="4_6ysni"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8gfwo"]
 
