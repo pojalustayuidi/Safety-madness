@@ -1,6 +1,6 @@
-[gd_scene load_steps=21 format=3 uid="uid://bxr5imn3w3imx"]
+[gd_scene load_steps=21 format=3 uid="uid://cg5717n7atwbk"]
 
-[ext_resource type="Script" uid="uid://dv68ugpa2rai2" path="res://Player.gd" id="1_4ntmi"]
+[ext_resource type="Script" path="res://Player.gd" id="1_4ntmi"]
 [ext_resource type="Texture2D" uid="uid://xuw0v5sr1jle" path="res://assets/12 Animated Character Template.png" id="2_btcbx"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gwnis"]
@@ -138,14 +138,13 @@ animations = [{
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_4ntmi")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Player"]]
 shape = SubResource("CapsuleShape2D_gwnis")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -8)
 sprite_frames = SubResource("SpriteFrames_7emwf")
-animation = &"Walk"
-frame_progress = 0.402336
+animation = &"Idle"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
