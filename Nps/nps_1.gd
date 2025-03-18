@@ -10,7 +10,7 @@ func _ready():
 	npc1_sprite.play("idle")
 	progress_bar.value = 100  
 	progress_bar.visible = false  
-	timer.wait_time = 10.0  # Таймер на 30 секунд
+	timer.wait_time = 30.0  # Таймер на 30 секунд
 	timer.one_shot = true  # 
 
 func _process(delta):
@@ -26,19 +26,26 @@ func _process(delta):
 		if not progress_bar.visible:
 			progress_bar.visible = true  # Показываем ProgressBar
 			timer.start()  
-		
-
-		progress_bar.value = (timer.time_left / timer.wait_time) * 100
+		var target_value = clampf((timer.time_left / timer.wait_time) * 100.0, 0.0, 100.0)
+		progress_bar.value = lerp(progress_bar.value, target_value, delta * 5.0)
+		update_progress_bar_color()
 	else:
 		# Если игрок вышел из радиуса
 		if progress_bar.visible:
 			progress_bar.visible = false  # Скрываем ProgressBar
 		progress_bar.value = 100  
 		timer.stop()  # Останавливаем таймер
+func update_progress_bar_color():
+	if progress_bar.value > 50:
+		progress_bar.tint_progress = Color(0, 1, 0)
+	elif progress_bar.value > 25:
+		progress_bar.tint_progress = Color(1, 0.5, 0)
+	else:
+		progress_bar.tint_progress = Color(1, 0, 0)
+			
 
 func _on_timer_timeout():
 	is_timer_finished = true
-	print("ProgressBar достиг нуля!")
 	if npc1_sprite:
 		npc1_sprite.play("dead")
 		progress_bar.visible = false
