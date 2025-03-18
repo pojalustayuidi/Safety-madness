@@ -167,12 +167,12 @@ position = Vector2(53, 56)
 shape = SubResource("CapsuleShape2D_8ct73")
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="."]
-offset_left = 42.0
-offset_top = 34.0
-offset_right = 84.0
-offset_bottom = 45.0
-scale = Vector2(0.543141, 0.674764)
-step = 2.0
+offset_left = 34.0
+offset_top = 25.0
+offset_right = 76.0
+offset_bottom = 36.0
+rotation = -0.00886934
+scale = Vector2(0.788674, 1.23724)
 value = 100.0
 texture_under = ExtResource("4_vsf80")
 texture_over = ExtResource("5_oc27v")
@@ -181,7 +181,7 @@ tint_progress = Color(0.890196, 0.329412, 0.0941176, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 10.0
+wait_time = 30.0
 one_shot = true
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
