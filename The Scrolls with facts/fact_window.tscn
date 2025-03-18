@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://dfu0l00jan5df"]
+
+[ext_resource type="Script" uid="uid://bo0k6arslq4f0" path="res://The Scrolls with facts/fact_window.gd" id="1_pgc2b"]
+
+[node name="FactWindow" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_pgc2b")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 377.0
+offset_top = 217.0
+offset_right = 700.0
+offset_bottom = 545.0
+
+[node name="Label" type="Label" parent="."]
+modulate = Color(1, 1, 1, 0.937255)
+offset_left = 435.0
+offset_top = 247.0
+offset_right = 652.0
+offset_bottom = 496.0
+text = "ПИСЯ ПОПА КАКАШЕЧКА"
+autowrap_mode = 3
+
+[node name="quit" type="Button" parent="."]
+offset_left = 677.0
+offset_top = 220.0
+offset_right = 695.0
+offset_bottom = 251.0
+text = "X"
+
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
