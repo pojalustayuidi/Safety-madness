@@ -1,7 +1,8 @@
-[gd_scene load_steps=15 format=3 uid="uid://dc7rsrun2rptj"]
+[gd_scene load_steps=21 format=3 uid="uid://dc7rsrun2rptj"]
 
 [ext_resource type="Script" uid="uid://dmxhegacjctdk" path="res://Nps/nps_1.gd" id="1_e70hk"]
 [ext_resource type="Texture2D" uid="uid://dsdfnvn0v60in" path="res://assets/СпрайтСетНПС1.png" id="2_nfwtw"]
+[ext_resource type="Texture2D" uid="uid://cwkbfxuuhw0yo" path="res://assets/Nps1/СпрайтСетНИП1.png" id="3_pprwc"]
 [ext_resource type="Texture2D" uid="uid://dxh81uf2p168m" path="res://assets/uiBar/Sprite-0003.png" id="4_vsf80"]
 [ext_resource type="Texture2D" uid="uid://bi0haw6340c1e" path="res://assets/uiBar/Sprite-0001.png" id="5_oc27v"]
 [ext_resource type="Texture2D" uid="uid://be3ft6pilppom" path="res://assets/uiBar/Sprite-0002.png" id="6_pyxqt"]
@@ -19,8 +20,28 @@ atlas = ExtResource("2_nfwtw")
 region = Rect2(32, 288, 32, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oc27v"]
-atlas = ExtResource("2_nfwtw")
-region = Rect2(0, 0, 32, 48)
+atlas = ExtResource("3_pprwc")
+region = Rect2(0, 336, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_55ara"]
+atlas = ExtResource("3_pprwc")
+region = Rect2(32, 336, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1vo3t"]
+atlas = ExtResource("3_pprwc")
+region = Rect2(64, 336, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pc3eg"]
+atlas = ExtResource("3_pprwc")
+region = Rect2(96, 336, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ytlw"]
+atlas = ExtResource("3_pprwc")
+region = Rect2(0, 384, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_01xad"]
+atlas = ExtResource("3_pprwc")
+region = Rect2(32, 384, 32, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pyxqt"]
 atlas = ExtResource("2_nfwtw")
@@ -54,10 +75,25 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_oc27v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_55ara")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1vo3t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pc3eg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ytlw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_01xad")
 }],
 "loop": false,
 "name": &"dead",
-"speed": 8.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -89,7 +125,9 @@ shape = SubResource("CapsuleShape2D_8ct73")
 position = Vector2(54, 48)
 scale = Vector2(0.903137, 0.903137)
 sprite_frames = SubResource("SpriteFrames_q8ca3")
-animation = &"Special"
+animation = &"dead"
+frame = 5
+frame_progress = 1.0
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="."]
 offset_left = 36.0
@@ -106,7 +144,7 @@ tint_progress = Color(0.890196, 0.329412, 0.0941176, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 30.0
+wait_time = 15.0
 one_shot = true
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

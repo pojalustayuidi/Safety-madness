@@ -11,7 +11,7 @@ func _ready():
 	npc1_sprite.play("idle")
 	progress_bar.value = 100  
 	progress_bar.visible = false  
-	timer.wait_time = 30.0  # Таймер на 30 секунд
+	timer.wait_time = 15.0  # Таймер на 30 секунд
 	timer.one_shot = true  # 
 
 func _process(delta):
