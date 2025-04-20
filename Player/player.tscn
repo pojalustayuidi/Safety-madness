@@ -257,6 +257,7 @@ animations = [{
 }]
 
 [node name="Player2" type="CharacterBody2D"]
+scale = Vector2(1.41609, 1.41609)
 script = ExtResource("1_4ntmi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Player"]]

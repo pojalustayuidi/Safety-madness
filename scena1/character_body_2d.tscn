@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=3 uid="uid://b1x1fkuapp3ij"]
+
+[ext_resource type="Texture2D" uid="uid://c8v7wxkxmefm8" path="res://Characters/SS_BaseballGuys(128x48).png" id="1_w6lyy"]
+[ext_resource type="Texture2D" uid="uid://jurs1iw6i53e" path="res://Locs/Loc1_BackGround.png" id="2_fsa3n"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fsa3n"]
+atlas = ExtResource("1_w6lyy")
+region = Rect2(0, 0, 128, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qoy1g"]
+atlas = ExtResource("1_w6lyy")
+region = Rect2(0, 48, 128, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2hnfd"]
+atlas = ExtResource("1_w6lyy")
+region = Rect2(0, 96, 128, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s818u"]
+atlas = ExtResource("1_w6lyy")
+region = Rect2(0, 144, 128, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h65jx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fsa3n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qoy1g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2hnfd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s818u")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(64, 24)
+sprite_frames = SubResource("SpriteFrames_h65jx")
+frame_progress = 0.115181
+
+[node name="BG" type="ParallaxBackground" parent="."]
+
+[node name="Loc1BackGround" type="Sprite2D" parent="BG"]
+position = Vector2(149, 72)
+texture = ExtResource("2_fsa3n")
