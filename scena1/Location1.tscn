@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://30ma47wju0da"]
+[gd_scene load_steps=21 format=3 uid="uid://30ma47wju0da"]
 
 [ext_resource type="Texture2D" uid="uid://jurs1iw6i53e" path="res://assets/Level1/Loc1_BackGround.png" id="1_faemb"]
 [ext_resource type="Texture2D" uid="uid://bk0wntcnf6d2u" path="res://assets/Level1/Door.png" id="2_710xb"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://s0tek5elo47t" path="res://assets/Level1/Floor2.png" id="7_iw5iw"]
 [ext_resource type="Texture2D" uid="uid://cn5dfjaxu6q6m" path="res://assets/Level1/floor1.png" id="8_5roya"]
 [ext_resource type="Texture2D" uid="uid://d04qe57cdmb20" path="res://assets/Level1/WallRight.png" id="9_4jw2l"]
+[ext_resource type="PackedScene" uid="uid://ct0e2v0aqspnr" path="res://The Scrolls with facts/scroll.tscn" id="9_5roya"]
 [ext_resource type="PackedScene" uid="uid://cg5717n7atwbk" path="res://Player/player.tscn" id="10_mhkfp"]
 [ext_resource type="PackedScene" uid="uid://bpkvhha2qn0g" path="res://Nps/HeadthoneNps_Event1/HeadthoneNps1.tscn" id="11_710xb"]
 [ext_resource type="PackedScene" uid="uid://dc7rsrun2rptj" path="res://Nps/Nps_1.tscn" id="11_x64al"]
@@ -114,6 +115,18 @@ position = Vector2(571.65, 602.648)
 scale = Vector2(3.80151, 4.01157)
 shape = SubResource("RectangleShape2D_faemb")
 
+[node name="Door_Floor2" type="Sprite2D" parent="Loc/Floor2"]
+position = Vector2(-106.744, -26.8841)
+scale = Vector2(0.961641, 1.07552)
+texture = ExtResource("2_710xb")
+
+[node name="Conveyor" parent="Loc/Floor2" instance=ExtResource("14_iw5iw")]
+position = Vector2(101.107, -20.5072)
+scale = Vector2(0.809902, 0.905809)
+
+[node name="Area2D" parent="Loc/Floor2" instance=ExtResource("9_5roya")]
+position = Vector2(-80.568, -12.6812)
+
 [node name="Floor1" type="Sprite2D" parent="Loc"]
 physics_interpolation_mode = 1
 position = Vector2(576.125, 594.541)
@@ -142,29 +155,16 @@ position = Vector2(-0.355366, 0.854182)
 shape = SubResource("RectangleShape2D_710xb")
 
 [node name="Player" parent="Loc" instance=ExtResource("10_mhkfp")]
-position = Vector2(289, 256)
+position = Vector2(143, 518)
 scale = Vector2(3.00756, 3.28774)
 
 [node name="HeadthoneNps1" parent="Loc" instance=ExtResource("11_710xb")]
-position = Vector2(172, 527)
+position = Vector2(614, 528)
 scale = Vector2(3.84276, 3.84276)
 
 [node name="Nps1" parent="Loc" instance=ExtResource("11_x64al")]
 position = Vector2(282, 60)
 scale = Vector2(3.81309, 3.66164)
-
-[node name="Door_Floor2" type="Sprite2D" parent="Loc"]
-position = Vector2(166, 236)
-scale = Vector2(3.71053, 3.71053)
-texture = ExtResource("2_710xb")
-
-[node name="Conveyor" parent="Loc" instance=ExtResource("14_iw5iw")]
-position = Vector2(967, 258)
-scale = Vector2(3.12504, 3.12504)
-
-[node name="BacketBallNps" parent="Loc" instance=ExtResource("14_xbrpi")]
-position = Vector2(847, 239)
-scale = Vector2(3.6076, 3.6076)
 
 [node name="music" type="Node2D" parent="Loc"]
 position = Vector2(1293, 43)
@@ -172,5 +172,9 @@ script = ExtResource("17_4jw2l")
 
 [node name="MusicPlayer" type="AudioStreamPlayer2D" parent="Loc/music"]
 position = Vector2(-716, 303)
+
+[node name="BacketBallNps" parent="Loc" instance=ExtResource("14_xbrpi")]
+position = Vector2(874, 240)
+scale = Vector2(3.6076, 3.6076)
 
 [connection signal="body_entered" from="Loc/Door/Door/Area2D" to="Loc/Door/Door/Area2D" method="_on_body_entered"]

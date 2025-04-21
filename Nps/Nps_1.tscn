@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://dc7rsrun2rptj"]
+[gd_scene load_steps=20 format=3 uid="uid://dc7rsrun2rptj"]
 
 [ext_resource type="Script" uid="uid://dmxhegacjctdk" path="res://Nps/nps_1.gd" id="1_e70hk"]
 [ext_resource type="Texture2D" uid="uid://dsdfnvn0v60in" path="res://assets/СпрайтСетНПС1.png" id="2_nfwtw"]
@@ -6,10 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://dxh81uf2p168m" path="res://assets/uiBar/Sprite-0003.png" id="4_vsf80"]
 [ext_resource type="Texture2D" uid="uid://bi0haw6340c1e" path="res://assets/uiBar/Sprite-0001.png" id="5_oc27v"]
 [ext_resource type="Texture2D" uid="uid://be3ft6pilppom" path="res://assets/uiBar/Sprite-0002.png" id="6_pyxqt"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8ct73"]
-radius = 11.0
-height = 42.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pprwc"]
 atlas = ExtResource("2_nfwtw")
@@ -127,10 +123,6 @@ animations = [{
 [node name="Nps1" type="CharacterBody2D"]
 position = Vector2(-55, -56)
 script = ExtResource("1_e70hk")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(53, 49)
-shape = SubResource("CapsuleShape2D_8ct73")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(54, 48)
