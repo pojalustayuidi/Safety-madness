@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 
 const SPEED = 200.0
-const JUMP_VELOCITY = -270.0
+const JUMP_VELOCITY = -350.0
 
 @onready var anim = $AnimatedSprite2D
 @onready var idle_timer = $Timer# Таймер для отслеживания бездействия

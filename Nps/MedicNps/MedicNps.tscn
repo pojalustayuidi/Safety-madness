@@ -1,0 +1,81 @@
+[gd_scene load_steps=12 format=3 uid="uid://brt76n4xwk1qy"]
+
+[ext_resource type="Script" uid="uid://bmvgc40u16pos" path="res://Nps/MedicNps/medic_nps.gd" id="1_lvj2p"]
+[ext_resource type="Texture2D" uid="uid://bcaf4h4na8oyf" path="res://assets/Characters/SS_Stan(80x32).png" id="2_07ahi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7301k"]
+atlas = ExtResource("2_07ahi")
+region = Rect2(0, 32, 80, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h2sac"]
+atlas = ExtResource("2_07ahi")
+region = Rect2(80, 32, 80, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tblow"]
+atlas = ExtResource("2_07ahi")
+region = Rect2(160, 32, 80, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8dgax"]
+atlas = ExtResource("2_07ahi")
+region = Rect2(240, 32, 80, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8fbaw"]
+atlas = ExtResource("2_07ahi")
+region = Rect2(0, 0, 80, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hw1kw"]
+atlas = ExtResource("2_07ahi")
+region = Rect2(80, 0, 80, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xutcj"]
+atlas = ExtResource("2_07ahi")
+region = Rect2(160, 0, 80, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tmbp7"]
+atlas = ExtResource("2_07ahi")
+region = Rect2(240, 0, 80, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4xgop"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7301k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h2sac")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tblow")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8dgax")
+}],
+"loop": true,
+"name": &"heal",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8fbaw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hw1kw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xutcj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tmbp7")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[node name="MedicNps" type="Node2D"]
+script = ExtResource("1_lvj2p")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_4xgop")
+animation = &"heal"
+frame_progress = 0.71573
