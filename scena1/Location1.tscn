@@ -1,59 +1,44 @@
-[gd_scene load_steps=17 format=3 uid="uid://30ma47wju0da"]
+[gd_scene load_steps=20 format=3 uid="uid://30ma47wju0da"]
 
-[ext_resource type="Texture2D" uid="uid://jurs1iw6i53e" path="res://Locs/Loc1_BackGround.png" id="1_faemb"]
-[ext_resource type="Texture2D" uid="uid://bk0wntcnf6d2u" path="res://Locs/Door.png" id="2_710xb"]
-[ext_resource type="Texture2D" uid="uid://n27gs5gjjrhm" path="res://Locs/Box1.png" id="3_x64al"]
-[ext_resource type="Texture2D" uid="uid://bnvg4shkug8cb" path="res://Locs/Door2.png" id="4_mhkfp"]
-[ext_resource type="Texture2D" uid="uid://chies4ydw6rxj" path="res://Locs/SS_beltTop(99x32).png" id="5_xbrpi"]
-[ext_resource type="Texture2D" uid="uid://cnlpkki1hlakd" path="res://Locs/WallLeft.png" id="6_xbrpi"]
-[ext_resource type="Texture2D" uid="uid://s0tek5elo47t" path="res://Locs/Floor2.png" id="7_iw5iw"]
-[ext_resource type="Texture2D" uid="uid://cn5dfjaxu6q6m" path="res://Locs/floor1.png" id="8_5roya"]
-[ext_resource type="Texture2D" uid="uid://d04qe57cdmb20" path="res://Locs/WallRight.png" id="9_4jw2l"]
+[ext_resource type="Texture2D" uid="uid://jurs1iw6i53e" path="res://assets/Level1/Loc1_BackGround.png" id="1_faemb"]
+[ext_resource type="Texture2D" uid="uid://bk0wntcnf6d2u" path="res://assets/Level1/Door.png" id="2_710xb"]
+[ext_resource type="Script" uid="uid://blbejk7rrj1v4" path="res://scena1/teleport_door.gd" id="3_mhkfp"]
+[ext_resource type="Texture2D" uid="uid://n27gs5gjjrhm" path="res://assets/Level1/Box1.png" id="3_x64al"]
+[ext_resource type="Texture2D" uid="uid://bnvg4shkug8cb" path="res://assets/Level1/Door2.png" id="4_mhkfp"]
+[ext_resource type="Texture2D" uid="uid://cnlpkki1hlakd" path="res://assets/Level1/WallLeft.png" id="6_xbrpi"]
+[ext_resource type="Texture2D" uid="uid://s0tek5elo47t" path="res://assets/Level1/Floor2.png" id="7_iw5iw"]
+[ext_resource type="Texture2D" uid="uid://cn5dfjaxu6q6m" path="res://assets/Level1/floor1.png" id="8_5roya"]
+[ext_resource type="Texture2D" uid="uid://d04qe57cdmb20" path="res://assets/Level1/WallRight.png" id="9_4jw2l"]
 [ext_resource type="PackedScene" uid="uid://cg5717n7atwbk" path="res://Player/player.tscn" id="10_mhkfp"]
+[ext_resource type="PackedScene" uid="uid://bpkvhha2qn0g" path="res://Nps/HeadthoneNps_Event1/HeadthoneNps1.tscn" id="11_710xb"]
+[ext_resource type="PackedScene" uid="uid://dc7rsrun2rptj" path="res://Nps/Nps_1.tscn" id="11_x64al"]
+[ext_resource type="PackedScene" uid="uid://bgl46joayun4m" path="res://scena1/conveyor.tscn" id="14_iw5iw"]
+[ext_resource type="PackedScene" uid="uid://f1n13dwafjmd" path="res://Nps/BasketBallNps_Event3/BacketBallNps.tscn" id="14_xbrpi"]
+[ext_resource type="Script" uid="uid://durequesrnpj4" path="res://scena1/music.gd" id="17_4jw2l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mhkfp"]
+size = Vector2(19.4631, 36.6694)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x64al"]
+size = Vector2(12.6379, 9.41379)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_710xb"]
+size = Vector2(5.6146, 128.902)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_faemb"]
-size = Vector2(303.567, 10.8859)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_mhde3"]
-atlas = ExtResource("5_xbrpi")
-region = Rect2(0, 0, 99, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ac33j"]
-atlas = ExtResource("5_xbrpi")
-region = Rect2(99, 0, 99, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_2x860"]
-atlas = ExtResource("5_xbrpi")
-region = Rect2(198, 0, 99, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_28ocw"]
-atlas = ExtResource("5_xbrpi")
-region = Rect2(297, 0, 99, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_tlabs"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_mhde3")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ac33j")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_2x860")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_28ocw")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
+size = Vector2(291.236, 10.8859)
 
 [node name="Location1" type="Node2D"]
 position = Vector2(1293, 43)
 
 [node name="Loc" type="ParallaxBackground" parent="."]
+
+[node name="MedicSpawn" type="Marker2D" parent="Loc"]
+position = Vector2(225, 222)
+
+[node name="TeleportExit" type="Marker2D" parent="Loc"]
+position = Vector2(166, 235)
+scale = Vector2(3.38157, 3.38157)
 
 [node name="BG" type="Sprite2D" parent="Loc"]
 physics_interpolation_mode = 2
@@ -61,23 +46,44 @@ position = Vector2(576, 309.25)
 scale = Vector2(3.86577, 4.33217)
 texture = ExtResource("1_faemb")
 
-[node name="Door" type="Sprite2D" parent="Loc"]
-position = Vector2(234, 504)
-scale = Vector2(3.38157, 3.38157)
+[node name="Door" type="Node2D" parent="Loc"]
+position = Vector2(155, 239)
+scale = Vector2(3.71053, 3.71053)
+
+[node name="Door" type="Sprite2D" parent="Loc/Door"]
+position = Vector2(238.241, 75.461)
+scale = Vector2(0.911345, 0.911345)
 texture = ExtResource("2_710xb")
+
+[node name="Area2D" type="Area2D" parent="Loc/Door/Door"]
+position = Vector2(-59.7356, -149.93)
+scale = Vector2(0.295721, 0.295721)
+script = ExtResource("3_mhkfp")
+target_position = NodePath("../../../TeleportExit")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Loc/Door/Door/Area2D"]
+position = Vector2(201.092, 506)
+scale = Vector2(3.38157, 3.38157)
+shape = SubResource("RectangleShape2D_mhkfp")
 
 [node name="Box1" type="Sprite2D" parent="Loc"]
 position = Vector2(334, 547)
 scale = Vector2(3.625, 3.625)
 texture = ExtResource("3_x64al")
 
+[node name="StaticBody2D" type="StaticBody2D" parent="Loc/Box1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Loc/Box1/StaticBody2D"]
+position = Vector2(1.68103, 2.77586)
+shape = SubResource("RectangleShape2D_x64al")
+
 [node name="Door2" type="Sprite2D" parent="Loc"]
-position = Vector2(26, 487)
+position = Vector2(26, 505)
 scale = Vector2(3.32031, 3.32031)
 texture = ExtResource("4_mhkfp")
 
 [node name="Door3" type="Sprite2D" parent="Loc"]
-position = Vector2(27, 229)
+position = Vector2(29, 236)
 scale = Vector2(3.32031, 3.32031)
 texture = ExtResource("4_mhkfp")
 
@@ -86,6 +92,12 @@ physics_interpolation_mode = 1
 position = Vector2(15.0861, 305.368)
 scale = Vector2(4.27457, 4.27457)
 texture = ExtResource("6_xbrpi")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Loc/WallLeft"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Loc/WallLeft/StaticBody2D"]
+position = Vector2(-0.721967, -1.02186)
+shape = SubResource("RectangleShape2D_710xb")
 
 [node name="Floor2" type="Sprite2D" parent="Loc"]
 physics_interpolation_mode = 1
@@ -98,7 +110,7 @@ position = Vector2(-149.324, -154.097)
 scale = Vector2(0.259459, 0.259187)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Loc/Floor2/StaticBody2D"]
-position = Vector2(573.995, 620)
+position = Vector2(571.65, 602.648)
 scale = Vector2(3.80151, 4.01157)
 shape = SubResource("RectangleShape2D_faemb")
 
@@ -113,7 +125,7 @@ position = Vector2(-149.324, -154.097)
 scale = Vector2(0.259187, 0.259187)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Loc/Floor1/StaticBody2D"]
-position = Vector2(573.995, 620)
+position = Vector2(575.568, 596.999)
 scale = Vector2(3.80151, 4.01157)
 shape = SubResource("RectangleShape2D_faemb")
 
@@ -123,19 +135,42 @@ position = Vector2(1138.56, 293.25)
 scale = Vector2(4.39015, 4.39015)
 texture = ExtResource("9_4jw2l")
 
-[node name="ShockGuy" type="CharacterBody2D" parent="."]
+[node name="StaticBody2D" type="StaticBody2D" parent="Loc/WallRight"]
 
-[node name="HeadthoneGuy" type="CharacterBody2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Loc/WallRight/StaticBody2D"]
+position = Vector2(-0.355366, 0.854182)
+shape = SubResource("RectangleShape2D_710xb")
 
-[node name="BaseballGuys" type="CharacterBody2D" parent="."]
+[node name="Player" parent="Loc" instance=ExtResource("10_mhkfp")]
+position = Vector2(289, 256)
+scale = Vector2(3.00756, 3.28774)
 
-[node name="Player2" parent="." instance=ExtResource("10_mhkfp")]
-position = Vector2(-647, 455)
+[node name="HeadthoneNps1" parent="Loc" instance=ExtResource("11_710xb")]
+position = Vector2(172, 527)
+scale = Vector2(3.84276, 3.84276)
 
-[node name="Belt" type="CharacterBody2D" parent="."]
+[node name="Nps1" parent="Loc" instance=ExtResource("11_x64al")]
+position = Vector2(282, 60)
+scale = Vector2(3.81309, 3.66164)
 
-[node name="Belt" type="AnimatedSprite2D" parent="Belt"]
-position = Vector2(-371, 200)
-scale = Vector2(4.04688, 4.04688)
-sprite_frames = SubResource("SpriteFrames_tlabs")
-frame_progress = 0.640404
+[node name="Door_Floor2" type="Sprite2D" parent="Loc"]
+position = Vector2(166, 236)
+scale = Vector2(3.71053, 3.71053)
+texture = ExtResource("2_710xb")
+
+[node name="Conveyor" parent="Loc" instance=ExtResource("14_iw5iw")]
+position = Vector2(967, 258)
+scale = Vector2(3.12504, 3.12504)
+
+[node name="BacketBallNps" parent="Loc" instance=ExtResource("14_xbrpi")]
+position = Vector2(847, 239)
+scale = Vector2(3.6076, 3.6076)
+
+[node name="music" type="Node2D" parent="Loc"]
+position = Vector2(1293, 43)
+script = ExtResource("17_4jw2l")
+
+[node name="MusicPlayer" type="AudioStreamPlayer2D" parent="Loc/music"]
+position = Vector2(-716, 303)
+
+[connection signal="body_entered" from="Loc/Door/Door/Area2D" to="Loc/Door/Door/Area2D" method="_on_body_entered"]

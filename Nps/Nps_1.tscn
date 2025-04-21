@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://be3ft6pilppom" path="res://assets/uiBar/Sprite-0002.png" id="6_pyxqt"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8ct73"]
-radius = 18.0
+radius = 11.0
 height = 42.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pprwc"]
@@ -74,6 +74,17 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_pprwc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vsf80")
+}],
+"loop": true,
+"name": &"Special_1",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_oc27v")
 }, {
 "duration": 1.0,
@@ -114,7 +125,7 @@ animations = [{
 }]
 
 [node name="Nps1" type="CharacterBody2D"]
-position = Vector2(0, -1)
+position = Vector2(-55, -56)
 script = ExtResource("1_e70hk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -125,9 +136,9 @@ shape = SubResource("CapsuleShape2D_8ct73")
 position = Vector2(54, 48)
 scale = Vector2(0.903137, 0.903137)
 sprite_frames = SubResource("SpriteFrames_q8ca3")
-animation = &"dead"
-frame = 5
-frame_progress = 1.0
+animation = &"Special_1"
+frame = 1
+frame_progress = 0.901352
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="."]
 offset_left = 36.0

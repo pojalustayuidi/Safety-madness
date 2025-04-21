@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bg8uowwesycvi" path="res://assets/СпрайтСетГГ.png" id="2_4ntmi"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gwnis"]
+radius = 11.9836
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_btcbx"]
 atlas = ExtResource("2_4ntmi")
@@ -257,14 +258,14 @@ animations = [{
 }]
 
 [node name="Player2" type="CharacterBody2D"]
-scale = Vector2(1.41609, 1.41609)
+scale = Vector2(2.58688, 2.91798)
 script = ExtResource("1_4ntmi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Player"]]
 shape = SubResource("CapsuleShape2D_gwnis")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -8)
+position = Vector2(0.773133, -7.88215)
 sprite_frames = SubResource("SpriteFrames_7emwf")
 animation = &"Idle"
 frame_progress = 0.812222

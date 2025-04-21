@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://c77tmvcbldlov"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n5qgu"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"event",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="ElectirckNps" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_n5qgu")
+animation = &"event"

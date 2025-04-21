@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://bpkvhha2qn0g"]
+
+[ext_resource type="Texture2D" uid="uid://b0o264d50nytd" path="res://assets/Characters/HeadthoneGuy.png" id="1_nli2x"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t7q13"]
+radius = 6.19176
+height = 24.7671
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_djo8e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_nli2x")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="HeadthoneNps" type="CharacterBody2D"]
+scale = Vector2(0.969029, 0.969029)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_t7q13")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(8.25568, -3.09588)
+scale = Vector2(0.957659, 0.957659)
+sprite_frames = SubResource("SpriteFrames_djo8e")
+animation = &"idle"
