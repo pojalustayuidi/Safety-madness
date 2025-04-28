@@ -52,7 +52,7 @@ position = Vector2(155, 239)
 scale = Vector2(3.71053, 3.71053)
 
 [node name="Door" type="Sprite2D" parent="Loc/Door"]
-position = Vector2(238.241, 75.461)
+position = Vector2(251.447, 75.461)
 scale = Vector2(0.911345, 0.911345)
 texture = ExtResource("2_710xb")
 
@@ -63,7 +63,7 @@ script = ExtResource("3_mhkfp")
 target_position = NodePath("../../../TeleportExit")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Loc/Door/Door/Area2D"]
-position = Vector2(201.092, 506)
+position = Vector2(202.092, 506)
 scale = Vector2(3.38157, 3.38157)
 shape = SubResource("RectangleShape2D_mhkfp")
 
@@ -125,7 +125,7 @@ position = Vector2(101.107, -20.5072)
 scale = Vector2(0.809902, 0.905809)
 
 [node name="Area2D" parent="Loc/Floor2" instance=ExtResource("9_5roya")]
-position = Vector2(-80.568, -12.6812)
+position = Vector2(-38.0649, 63.5507)
 
 [node name="Floor1" type="Sprite2D" parent="Loc"]
 physics_interpolation_mode = 1
@@ -159,7 +159,7 @@ position = Vector2(143, 518)
 scale = Vector2(3.00756, 3.28774)
 
 [node name="HeadthoneNps1" parent="Loc" instance=ExtResource("11_710xb")]
-position = Vector2(614, 528)
+position = Vector2(613, 512)
 scale = Vector2(3.84276, 3.84276)
 
 [node name="Nps1" parent="Loc" instance=ExtResource("11_x64al")]

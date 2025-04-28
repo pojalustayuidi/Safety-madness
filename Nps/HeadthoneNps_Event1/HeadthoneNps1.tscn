@@ -1,25 +1,46 @@
-[gd_scene load_steps=3 format=3 uid="uid://bpkvhha2qn0g"]
+[gd_scene load_steps=7 format=3 uid="uid://bpkvhha2qn0g"]
 
-[ext_resource type="Texture2D" uid="uid://b0o264d50nytd" path="res://assets/Characters/HeadthoneGuy.png" id="1_nli2x"]
+[ext_resource type="Texture2D" uid="uid://c6pwr6iwvwy7l" path="res://HeadthoneGuy(32x32).png" id="1_nli2x"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_djo8e"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_nli2x"]
+atlas = ExtResource("1_nli2x")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t7q13"]
+atlas = ExtResource("1_nli2x")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_djo8e"]
+atlas = ExtResource("1_nli2x")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3p4jo"]
+atlas = ExtResource("1_nli2x")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t21pp"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_nli2x")
+"texture": SubResource("AtlasTexture_nli2x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t7q13")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_djo8e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3p4jo")
 }],
 "loop": true,
-"name": &"idle",
-"speed": 5.0
+"name": &"default",
+"speed": 6.0
 }]
 
 [node name="HeadthoneNps" type="CharacterBody2D"]
 scale = Vector2(0.969029, 0.969029)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(8.25568, -3.09588)
-scale = Vector2(0.957659, 0.957659)
-sprite_frames = SubResource("SpriteFrames_djo8e")
-animation = &"idle"
-
-[node name="Area2D" type="Area2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_t21pp")
+autoplay = "default"

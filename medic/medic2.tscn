@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://biar7p02otmyv"]
+
+[ext_resource type="Texture2D" uid="uid://dtc8xx6mp2x8w" path="res://SpriteSetStan(80x32).png" id="1_umclo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pmqx7"]
+atlas = ExtResource("1_umclo")
+region = Rect2(0, 32, 80, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f01ti"]
+atlas = ExtResource("1_umclo")
+region = Rect2(80, 32, 80, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_egcfe"]
+atlas = ExtResource("1_umclo")
+region = Rect2(160, 32, 80, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ncujm"]
+atlas = ExtResource("1_umclo")
+region = Rect2(240, 32, 80, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_agum0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pmqx7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f01ti")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_egcfe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ncujm")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 7.0
+}]
+
+[node name="Medic2" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_agum0")
+animation = &"Idle"
+frame_progress = 0.495744
+flip_h = true

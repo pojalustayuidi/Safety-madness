@@ -44,4 +44,4 @@ func _on_выйти_pressed() -> void:
 
 
 func _on_играть_pressed() -> void:
-	get_tree().change_scene_to_file("res://Level 1/Level_1.tscn")
+	get_tree().change_scene_to_file("res://scena1/Location1.tscn")
