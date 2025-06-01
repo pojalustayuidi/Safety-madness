@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://c4srrg0vomdp5"]
+
+[ext_resource type="Texture2D" uid="uid://b771nru06fvnp" path="res://assets/headphones_guy/Fire.png" id="1_2i8ww"]
+[ext_resource type="Script" uid="uid://ki00uxo7kxow" path="res://effects/fireball_effect.gd" id="1_sp7jt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ac8ol"]
+atlas = ExtResource("1_2i8ww")
+region = Rect2(44, 0, 39, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qj4v1"]
+atlas = ExtResource("1_2i8ww")
+region = Rect2(44, 32, 39, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_37yoo"]
+atlas = ExtResource("1_2i8ww")
+region = Rect2(44, 64, 39, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b6ea4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ac8ol")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qj4v1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_37yoo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="FireballEffect" type="Node2D"]
+script = ExtResource("1_sp7jt")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D"]
+sprite_frames = SubResource("SpriteFrames_b6ea4")
+frame_progress = 0.9852

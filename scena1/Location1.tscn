@@ -159,7 +159,7 @@ position = Vector2(143, 518)
 scale = Vector2(3.00756, 3.28774)
 
 [node name="HeadthoneNps1" parent="Loc" instance=ExtResource("11_710xb")]
-position = Vector2(613, 512)
+position = Vector2(611, 512)
 scale = Vector2(3.84276, 3.84276)
 
 [node name="Nps1" parent="Loc" instance=ExtResource("11_x64al")]
